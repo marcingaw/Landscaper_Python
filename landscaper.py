@@ -150,11 +150,15 @@ def ColorForPixel(p):
 
 turtle.colormode(1.0)
 turtle.speed(0)
+turtle.hideturtle()
 
-step = MAP_SIZE // 4
+# Set to 1 to draw the map at the highest resolution. Otherwise it will
+# gradually repaint it with higher and higher resolutions, but overall it will
+# take much more time.
+step = MAP_SIZE // 16
 
 while step > 0:
-    print(f'Drawing with {step} block size.')
+    print(f'drawing block size: {step}')
     turtle.penup()
     turtle.backward(MAP_SIZE // 2)
     turtle.left(90)
