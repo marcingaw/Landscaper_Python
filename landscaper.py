@@ -3,7 +3,7 @@ import turtle
 
 MAP_SIZE_EXP = 9
 landscape = terraingen.PrepareLandscape(MAP_SIZE_EXP, 1)
-MAP_SIZE = 2**MAP_SIZE_EXP
+MAP_SIZE = 2 ** MAP_SIZE_EXP
 
 # for r in range(MAP_SIZE + 1):
 #     for c in range(MAP_SIZE + 1):
@@ -40,7 +40,7 @@ turtle.hideturtle()
 # Set to 1 to draw the map at the highest resolution. Otherwise it will
 # gradually repaint it with higher and higher resolutions, but overall it will
 # take much more time.
-step = 1 #MAP_SIZE // 16
+step = 1  # MAP_SIZE // 16
 
 while step > 0:
     print(f'drawing block size: {step}')

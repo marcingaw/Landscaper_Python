@@ -3,7 +3,7 @@ import random
 def PrepareLandscape(map_size_exp, complexity):
     '''Generates a landscape as a square array of floats 0.0...1.0.
 
-    map_size-exp - the landscape will be of the size 2**map_size+1
+    map_size_exp - the landscape will be of the size 2**map_size+1
     complexity - 0, 1 or 2 - there will be, resp., 4, 9 or 25 initial points on the map
     returns a square array representing the terrain, values are floats 0.0...1.0'''
 
@@ -47,7 +47,7 @@ def PrepareLandscape(map_size_exp, complexity):
 
         return point_sum / point_cnt + (random.random() - 0.5) / rnd_div
 
-    map_size = 2**map_size_exp
+    map_size = 2 ** map_size_exp
     
     # This will be initialized to be a 2D array indexed 0...map_size.
     landscape = []
